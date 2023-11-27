@@ -2,8 +2,8 @@ import random
 word_list = ["Apple", "Banana", "Cherry", "Guava", "Strawberry"]
 print(word_list)
 
-word = random.choice(word_list)
-print(word)
+word_selected = random.choice(word_list)
+print(word_selected)
 
 print("Enter a Letter:")
 guess = input()
