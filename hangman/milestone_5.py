@@ -9,12 +9,12 @@ class Hangman:
         self.list_of_guesses = []
         #word to be guessed
         self.word = random.choice(self.word_list).lower()
-        print(self.word)
+        #print(self.word)
         #word_guessed: list - A list of the letters of the word, with _ for each letter not yet guessed. For example, if the word is 'apple', the word_guessed list would be ['_', '_', '_', '_', '_']. If the player guesses 'a', the list would be ['a', '_', '_', '_', '_']
         self.word_guessed = ["_" for num in range(len(self.word))]
         print(self.word_guessed)
         #num_letters: int - The number of UNIQUE letters in the word that have not been guessed yet
-        self.num_letters = len(list(set(self.word)))-1
+        self.num_letters = len(list(set(self.word)))
 
     def ask_for_input(self):
         while self.num_letters > 0:    
@@ -48,8 +48,7 @@ class Hangman:
 
 def play_game(word_list):
     num_lives = 5
-    #["Apple", "Banana", "Cherry", "Guava", "Strawberry","Pear"]
     game = Hangman(word_list, num_lives)
     game.ask_for_input()
 
-play_game(["Apple", "Banana", "Cherry", "Guava", "Strawberry","Pear"])
+play_game(["Apple", "Banana", "Cherry", "Guava", "Strawberry","Pear"])g
