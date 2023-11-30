@@ -30,6 +30,10 @@ class Hangman:
     def check_guess(self, guess):
         if(guess in self.word):
             print(f"Good guess! {guess} is in the word.")
+            for num in range(len(self.word)):
+                if(guess == self.word[guess]):
+                    self.word_guessed[num] = guess
+            self.num_letters -= 1
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
 
